@@ -1,0 +1,8 @@
+<div class="container"><center>
+    <form method="post">
+        {% csrf_token %}
+            <table>{{ userform.as_table }}</table>
+            <input type="submit" value="Register"/>
+    </form>
+</center>
+</div>

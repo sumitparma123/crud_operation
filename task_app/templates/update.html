@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>update Forms</h2>
+
+
+
+
+    
+<form action="{% url 'update' %}" method=post enctype="multipart/form-data">
+    {% csrf_token %}
+{% for i in product %}
+  <input type="text" id="d_id" name="d_id" value="{{i.id}}" hidden><br>
+  <label for="fname"> name:</label><br>
+  <input type="text" id="name" name="name" value="{{i.name}}"><br>
+  <label for="fname"> price:</label><br>
+  <input type="text" id="name" name="price" value="{{i.price}}"><br>
+  <label for="lname">Description:</label><br>
+  <input type="text" id="lname" name="descriptions" value="{{i.descriptions}}"><br><br>
+  <input type="submit" value="Submit">
+       
+{% endfor %}   
+</form> 
+</body>
+</html>
+
